@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="pcd_loader_ros" type="pcd_map_server" name="pcd_map_server" output="screen">
+      <param name="globalmap_pcd" value="$(find pcd_loader_ros)/data/map.pcd" />
+      <param name="downsample_resolution" value="0.1" />
+  </node>
+  <!-- for UTM Coordinate -->
+  <!--node pkg="tf" type="static_transform_publisher" name="tf_map_global_map" args="315675.14 4158609.14 0 0 0 0 1 /map /global_map 100" >
+    <param name="capability_group" value="0 tf"/>
+  </node-->
+  <arg name="rvizconfig" default="$(find pcd_loader_ros)/rviz/pcd_view.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+</launch>
