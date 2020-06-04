@@ -1,6 +1,6 @@
 # pcd_loader_ros
-***pcd_loader_ros*** is a ROS package for loading pcd files on rviz for visualization. by loading the map to rviz it can be used for multipurposes such as Localization and path planning.
-the package was inpired by **hdl_localization project by koide3**
+***pcd_loader_ros*** is a ROS package for loading pcd files for visualization. by loading the map to rviz it can be used for multipurposes such as Localization and path planning.<br>
+the package was inpired by **hdl_localization project by koide3**  https://github.com/koide3/hdl_localization
 
 ## Requirements
 - PCL 1.7
